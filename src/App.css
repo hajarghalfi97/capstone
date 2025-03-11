@@ -1,0 +1,263 @@
+
+
+
+ body {
+  background-color: rgb(57, 196, 212);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  font-style: oblique;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+li a, li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px; 
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.941);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  font-size: 16px;
+  width: 120px; 
+}
+
+li a:hover, li button:hover {
+  background-color: #1cbebe;
+}
+
+form {
+  max-width: 300px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 20px;
+  height: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+form label {
+  display: block;
+  margin: 5px 0;
+}
+
+input, select, button {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #12c9cc;
+}
+
+#contact {
+  background-color: black;
+  display: block;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
+#result {
+  text-align: center;
+  color: rgb(32, 166, 184);
+  margin-top: 20px;
+}
+
+.testimonials {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 20px;
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: rgba(119, 109, 106, 0.8);
+  border-radius: 10px;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  margin-top: 40px;
+}
+
+#about {
+  display: block;
+  background-color: black;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
+.form-chart-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+#chart-container {
+  width: 70%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 0px;
+}
+
+#fitnessForm {
+  width: 80%;
+}
+
+.testimonials {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 20px;
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: rgba(90, 82, 80, 0.8);
+  border-radius: 10px;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.login-container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #080707;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  width: auto;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}

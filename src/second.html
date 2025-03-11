@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Fit</title>
+    <style>
+ 
+
+ body {
+  background-color: rgb(57, 196, 212);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+
+       
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 2rem;
+            font-style:oblique;
+        }
+
+    
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+        }
+        li {
+            float: left;
+        }
+        li a, li button {
+            background-color: black;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        li a:hover, li button:hover {
+            background-color: rgb(44, 184, 209);
+            transform: scale(1.05);
+        }
+
+       
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+       
+        button {
+            background-color: rgb(255, 255, 255);
+            color: rgb(6, 5, 5);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #2bdae0;
+        }
+
+        
+        #contact, #about {
+            display: none;
+            padding: 20px;
+            margin-top: 0px;
+            border-radius: 00px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 300px;
+            margin: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        }
+        .card img {
+            width: 100%;
+            border-bottom: 2px solid #ff5733;
+        }
+        .card-body {
+            padding: 15px;
+            color: white;
+        }
+
+        
+        .hidden-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .hidden-content[aria-expanded="true"] {
+            max-height: 1000px; 
+            padding-top: 10px;
+        }
+
+      
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            margin-top: 40px;
+        }
+
+        
+        @media (max-width: 768px) {
+            ul li {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="http://localhost:3000/">Home</a></li>
+        <li><a href="https://www.sciencedaily.com/news/health_medicine/fitness/">News</a></li>
+        <li><button id="showContactButton">Contact</button></li>
+        <li><button id="showAboutButton">About</button></li>
+    </ul>
+
+    <div id="contact">
+        <p><b>Customer Support:</b> <a href="mailto:support@getfitapp.com" style="text-decoration: underline;">support@getfitapp.com</a></p>
+        <p><b>Phone:</b><a href="tel:+18041234567" style="text-decoration: underline;">+1-804-123-4567</a></p>
+        <p><b>Address:</b> 123 Get Fit Fitness St, Richmond City, Virginia State</p>
+    </div>
+
+    
+    <div id="about">
+        <h2>About Us</h2>
+        <p>At Get Fit, we believe that fitness is for everyone. Our platform is designed to help you achieve your goals, whether you're looking to lose weight, gain muscle, or simply live a healthier lifestyle.</p>
+        <p>Founded in 2025, our mission is to empower individuals to take charge of their health and fitness journey.</p>
+    </div>
+
+    <h1>Welcome to Get Fit Journey</h1>
+    <h2>Start Your Journey</h2>
+
+    <div class="card-container">
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div  class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/87537cc5-979c-408b-b665-0b8e32786e27/e3ebb85f-d0f4-4e90-9cb0-5e3ce672b246.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 1: Upper Body Strength</button>
+                    <div class="hidden-content"> 
+                    <p>Push-ups: 3 sets of 12 reps</p>
+                    <p>Pull-ups: 3 sets of 8 reps</p>
+                    <p>Dumbbell Bench Press: 3 sets of 10 reps</p>
+                    <p>Tricep Dips: 3 sets of 12 reps</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/f0675f8f-af26-4a7b-b578-7f3305e74df2/495ce76b-2474-49e4-b059-d113c97ca745.png" alt="Workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 2: Lower Body Strength</button>
+                    <div class="hidden-content">
+                    <p>Squats: 3 sets of 12 reps</p>
+                    <p>Lunges: 3 sets of 10 reps per leg</p>
+                    <p>Deadlifts: 3 sets of 8 reps</p>
+                    <p>Calf Raises: 3 sets of 15 reps</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/b71c65fe-2026-4aa9-902a-496eea94b71b/69657e97-710b-48a3-b38f-8dfb4184c3b1.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">day3: Cardio and Core</button>
+                    <div class="hidden-content">
+                    <p>Jump Rope: 5 minutes</p>
+                    <p>Plank: 3 sets of 1 minute</p>
+                    <p>Bicycle Crunches: 3 sets of 15 reps per side</p>
+                    <p>Mountain Climbers: 3 sets of 20 reps</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/4b0e8a31-34e8-4482-97f6-1d9d1302d6a9/c949698f-1b44-4c05-91c0-a8f985316f08.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 4: Active Recovery</button>
+                    <div class="hidden-content">
+                    <p>Yoga or Stretching: 20-30 minutes</p>
+                    <p>Light Walking: 15 minutes</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/f3baa468-92de-404d-80c6-82c3c68525af/e1742ea2-494c-497f-836d-974504dcc183.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 5: Full Body Strength</button>
+                    <div class="hidden-content">
+                    <p>Burpees: 3 sets of 10 reps</p>
+                    <p>Deadlifts: 3 sets of 8 reps</p>
+                    <p>Push-ups: 3 sets of 12 reps</p>
+                    <p>Plank Rows: 3 sets of 10 reps per side</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/703d82cb-84ba-4767-aad8-4c88ef2d25f0/f9c7beb8-5a3a-4ca6-acfc-1f845297ea78.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 6: Endurance Training</button>
+                    <div class="hidden-content">
+                    <p>Running or Cycling: 20-30 minutes</p>
+                    <p>High Knees: 3 sets of 20 reps</p>
+                    <p>Jump Squats: 3 sets of 12 reps</p>
+                    <p>Push-ups: 3 sets of 12 reps</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/31055e31-65da-4051-9c85-f25e3e3ecf2e/ad2ecb9b-a26b-4950-92ed-3c57f4f915cb.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 7: Upper Body Strength</button>
+                    <div class="hidden-content">
+                    <p>Push-ups: 3 sets of 12 reps</p>
+                    <p>Pull-ups: 3 sets of 8 reps</p>
+                    <p>Dumbbell Bench Press: 3 sets of 10 reps</p>
+                    <p>Tricep Dips: 3 sets of 12 reps</p>
+                </div>
+            </div>
+        </div>
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/74039f45-ef27-425f-8b00-3b9495a7e2d5/e27b985f-c046-4fb5-b2ef-8f2b2da0a516.png" alt="workout">
+                <div class="card-body">
+                    <button class="toggle-btn">Day 8: Full Body Strength</button>
+                    <div class="hidden-content">
+                    <p>Burpees: 3 sets of 10 reps</p>
+                    <p>Deadlifts: 3 sets of 8 reps</p>
+                    <p>Push-ups: 3 sets of 12 reps</p>
+                    <p>Plank Rows: 3 sets of 10 reps per side</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Get Fit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById('showContactButton').addEventListener('click', () => {
+            const contactDiv = document.getElementById('contact');
+            contactDiv.style.display = contactDiv.style.display === 'block' ? 'none' : 'block';
+            smoothScroll(contactDiv);
+        });
+
+      
+        document.getElementById('showAboutButton').addEventListener('click', () => {
+            const aboutDiv = document.getElementById('about');
+            aboutDiv.style.display = aboutDiv.style.display === 'block' ? 'none' : 'block';
+            smoothScroll(aboutDiv);
+        });
+
+       
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const hiddenContent = button.nextElementSibling;
+
+                if (hiddenContent.style.maxHeight) {
+                    hiddenContent.style.maxHeight = null;
+                    hiddenContent.setAttribute('aria-expanded', 'false');
+                } else {
+                    hiddenContent.style.maxHeight = hiddenContent.scrollHeight + 'px';
+                    hiddenContent.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+       
+        function smoothScroll(target) {
+            if (target.style.display === 'block') {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+</body>
+</html>
