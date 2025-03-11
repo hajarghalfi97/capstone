@@ -155,6 +155,9 @@
                 align-items: center;
             }
         }
+        .meal-plan {
+    display: none;
+}
     </style>
 </head>
 <body>
@@ -193,6 +196,12 @@
                     <p>Pull-ups: 3 sets of 8 reps</p>
                     <p>Dumbbell Bench Press: 3 sets of 10 reps</p>
                     <p>Tricep Dips: 3 sets of 12 reps</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+        <div class="meal-plan">
+            <p>Meal 1: Scrambled Eggs with Avocado</p>
+            <p>Meal 2: Grilled Chicken Salad</p>
+            <p>Meal 3: Salmon with Roasted Veggies</p>
+        </div>
                 </div>
             </div>
             </div>
@@ -207,6 +216,12 @@
                     <p>Lunges: 3 sets of 10 reps per leg</p>
                     <p>Deadlifts: 3 sets of 8 reps</p>
                     <p>Calf Raises: 3 sets of 15 reps</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+        <div class="meal-plan">
+            <p>Meal 1: Oatmeal with Berries</p>
+            <p>Meal 2: Grilled Chicken with Quinoa</p>
+            <p>Meal 3: Beef Stir-Fry with Veggies</p>
+        </div>
                 </div>
             </div>
         </div>
@@ -220,6 +235,12 @@
                     <p>Plank: 3 sets of 1 minute</p>
                     <p>Bicycle Crunches: 3 sets of 15 reps per side</p>
                     <p>Mountain Climbers: 3 sets of 20 reps</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+                    <div class="meal-plan">
+                        <p>Meal 1: Protein Shake</p>
+                        <p>Meal 2: Tuna Salad</p>
+                        <p>Meal 3: Chicken Wrap</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -231,6 +252,12 @@
                     <div class="hidden-content">
                     <p>Yoga or Stretching: 20-30 minutes</p>
                     <p>Light Walking: 15 minutes</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+                    <div class="meal-plan">
+                        <p>Meal 1: Avocado Toast with Egg</p>
+                        <p>Meal 2: Chicken Caesar Salad</p>
+                        <p>Meal 3: Grilled Fish with Sweet Potato</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,6 +271,12 @@
                     <p>Deadlifts: 3 sets of 8 reps</p>
                     <p>Push-ups: 3 sets of 12 reps</p>
                     <p>Plank Rows: 3 sets of 10 reps per side</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+        <div class="meal-plan">
+            <p>Meal 1: Smoothie with Spinach and Banana</p>
+            <p>Meal 2: Veggie Stir Fry with Rice</p>
+            <p>Meal 3: Quinoa Bowl with Tofu</p>
+        </div>
                 </div>
             </div>
         </div>
@@ -257,6 +290,12 @@
                     <p>High Knees: 3 sets of 20 reps</p>
                     <p>Jump Squats: 3 sets of 12 reps</p>
                     <p>Push-ups: 3 sets of 12 reps</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+                    <div class="meal-plan">
+                        <p>Meal 1: Eggs with Toast</p>
+                        <p>Meal 2: Chicken Wrap</p>
+                        <p>Meal 3: Salmon with Veggies</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,6 +309,12 @@
                     <p>Pull-ups: 3 sets of 8 reps</p>
                     <p>Dumbbell Bench Press: 3 sets of 10 reps</p>
                     <p>Tricep Dips: 3 sets of 12 reps</p>
+                    <button class="meal-btn">Show Meal Plan</button>
+                    <div class="meal-plan">
+                        <p>Meal 1: Greek Yogurt with Honey and Nuts</p>
+                        <p>Meal 2: Chicken Salad</p>
+                        <p>Meal 3: Grilled Veggies with Quinoa</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,9 +328,17 @@
                     <p>Deadlifts: 3 sets of 8 reps</p>
                     <p>Push-ups: 3 sets of 12 reps</p>
                     <p>Plank Rows: 3 sets of 10 reps per side</p>
+                    
+                    <button class="meal-btn">Show Meal Plan</button>
+        <div class="meal-plan">
+            <p>Meal 1: Chia Pudding</p>
+            <p>Meal 2: Grilled Chicken with Sweet Potatoes</p>
+            <p>Meal 3: Veggie Stir-fry with Brown Rice</p>
+        </div>
                 </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -294,21 +347,18 @@
     </footer>
 
     <script>
-        
         document.getElementById('showContactButton').addEventListener('click', () => {
             const contactDiv = document.getElementById('contact');
             contactDiv.style.display = contactDiv.style.display === 'block' ? 'none' : 'block';
             smoothScroll(contactDiv);
         });
 
-      
         document.getElementById('showAboutButton').addEventListener('click', () => {
             const aboutDiv = document.getElementById('about');
             aboutDiv.style.display = aboutDiv.style.display === 'block' ? 'none' : 'block';
             smoothScroll(aboutDiv);
         });
 
-       
         document.querySelectorAll('.toggle-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const hiddenContent = button.nextElementSibling;
@@ -322,8 +372,29 @@
                 }
             });
         });
+        document.querySelectorAll('.meal-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        // Get the closest hidden content div, then find the meal-plan inside it
+        const hiddenContent = this.closest('.hidden-content');
+        const mealPlan = hiddenContent.querySelector('.meal-plan');
 
-       
+        if (mealPlan) {
+            if (mealPlan.style.display === 'none' || mealPlan.style.display === '') {
+                mealPlan.style.display = 'block';
+                this.textContent = 'Hide Meal Plan';
+            } else {
+                mealPlan.style.display = 'none';
+                this.textContent = 'Show Meal Plan';
+            }
+        } else {
+            console.error("Meal plan not found.");
+        }
+    });
+});
+
+
+
+
         function smoothScroll(target) {
             if (target.style.display === 'block') {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
