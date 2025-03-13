@@ -1,13 +1,13 @@
 
 
-import React, { useState } from 'react';
+import React from 'react';
 
 const Navbar = ({ setContactVisible, setAboutVisible, contactVisible, aboutVisible }) => {
-  const [loginVisible, setLoginVisible] = useState(false);
+  // const [ setLoginVisible] = useState(false);
 
-  const toggleLogin = () => {
-    setLoginVisible(!loginVisible);
-  };
+//   const toggleLogin = () => {
+//     setLoginVisible(!loginVisible);
+//   };
 
   return (
     <header>
@@ -24,10 +24,10 @@ const Navbar = ({ setContactVisible, setAboutVisible, contactVisible, aboutVisib
             {aboutVisible ? 'Hide Info' : 'About'}
           </button>
         </li>
-        <li><button onClick={toggleLogin}>Login</button></li>
+      
       </ul>
 
-      {loginVisible && (
+      {/* {loginVisible && (
         <div className="login-container">
           <h2>Login</h2>
           <form>
@@ -39,10 +39,10 @@ const Navbar = ({ setContactVisible, setAboutVisible, contactVisible, aboutVisib
               <label>Password</label>
               <input type="password" placeholder="Enter your password" required />
             </div>
-            <button type="submit">Login</button>
-          </form>
-        </div>
-      )}
+            <button type="submit">Login</button> */}
+          {/* </form>
+        </div> */}
+      {/* )} */}
     </header>
   );
 }

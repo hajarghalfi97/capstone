@@ -374,7 +374,7 @@
         });
         document.querySelectorAll('.meal-btn').forEach(button => {
     button.addEventListener('click', function() {
-        // Get the closest hidden content div, then find the meal-plan inside it
+        
         const hiddenContent = this.closest('.hidden-content');
         const mealPlan = hiddenContent.querySelector('.meal-plan');
 
@@ -390,10 +390,7 @@
             console.error("Meal plan not found.");
         }
     });
-});
-
-
-
+}); 
 
         function smoothScroll(target) {
             if (target.style.display === 'block') {
