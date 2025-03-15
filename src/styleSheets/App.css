@@ -1,7 +1,5 @@
 
-
-
- body {
+body {
   background-color: rgb(57, 196, 212);
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,11 +12,13 @@
 header {
   text-align: center;
   padding: 20px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 1rem;
+  background-color: rgba(32, 31, 31, 0.5);
+  font-size: 8em;
   font-style: oblique;
+  
 }
 
+/* Navigation Bar */
 ul {
   list-style-type: none;
   margin: 0;
@@ -63,27 +63,30 @@ li a:hover, li button:hover {
   background-color: #1cbebe;
 }
 
+/* Forms */
 form {
   max-width: 300px;
-  margin: 20px auto;
+  margin: 10px auto;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 0px;
   height: auto;
   max-height: 400px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
   display: block;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 input, select, button {
-  width: 80%;
-  padding: 8px;
+  width: 90%;
+  padding: 10px;
   margin-bottom: 15px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 button {
@@ -99,11 +102,11 @@ button:hover {
   background-color: #12c9cc;
 }
 
+/* Contact */
 #contact {
   background-color: black;
-  display: block;
   padding: 20px;
-  margin-top: 0px;
+  margin-top: 5px;
   border-radius: 0px;
 }
 
@@ -113,71 +116,7 @@ button:hover {
   margin-top: 20px;
 }
 
-.testimonials {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 40px 20px;
-  margin-top: 40px;
-  color: white;
-  text-align: center;
-}
-
-.testimonials h2 {
-  margin-bottom: 20px;
-}
-
-.testimonial {
-  margin: 20px 0;
-  padding: 15px;
-  background-color: rgba(119, 109, 106, 0.8);
-  border-radius: 10px;
-}
-
-.testimonial img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
-}
-
-.testimonial p {
-  font-style: italic;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  margin-top: 40px;
-}
-
-#about {
-  display: block;
-  background-color: black;
-  padding: 20px;
-  margin-top: 0px;
-  border-radius: 0px;
-}
-
-.form-chart-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: flex-start;
-}
-
-#chart-container {
-  width: 70%;
-  height: 400px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 0px;
-}
-
-#fitnessForm {
-  width: 80%;
-}
-
+/* Testimonials Section */
 .testimonials {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 40px 20px;
@@ -208,27 +147,50 @@ footer {
   font-style: italic;
 }
 
-.login-container {
-  width: 300px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #080707;
+/* Footer */
+footer {
   text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  margin-top: 40px;
 }
 
-form {
+/* About Section */
+#about {
+  display: block;
+  background-color: black;
+  padding: 20px;
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
+/* Chart & Form Container */
+.form-chart-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+#chart-container {
+  width: 70%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 0px;
+}
+
+#form {
+  width: 80%;
 }
 
 div {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 label {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -239,10 +201,11 @@ input {
   border-radius: 4px;
 }
 
+/* Button Styling */
 button {
   padding: 10px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #4cc0cf;
   color: white;
   border: none;
   border-radius: 10px;
@@ -250,14 +213,4 @@ button {
   display: block;
   margin: 10px auto;
   width: auto;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-.error {
-  color: red;
-  font-size: 14px;
-  text-align: center;
 }
